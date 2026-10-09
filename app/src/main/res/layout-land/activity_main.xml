@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="8dp"
+    android:background="@color/black">
+
+    <!-- PANTALLA ÚNICA -->
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/calculator"
+        android:gravity="center_vertical|end"
+        android:paddingHorizontal="12dp"
+        android:text="@string/zero"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <!-- FILA MEMORIA (MC, MR, M-, M+) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginBottom="2dp">
+
+        <Button
+            android:id="@+id/btnMC"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:text="@string/btn_mc"
+            android:textColor="@color/purple"
+            android:backgroundTint="@color/grey"
+            android:textSize="20sp"
+            android:fontFamily="@font/calculator"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnMR"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:text="@string/btn_mr"
+            android:textColor="@color/purple"
+            android:backgroundTint="@color/grey"
+            android:textSize="20sp"
+            android:fontFamily="@font/calculator"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnMMinus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:text="@string/btn_mminus"
+            android:textColor="@color/purple"
+            android:backgroundTint="@color/grey"
+            android:textSize="20sp"
+            android:fontFamily="@font/calculator"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnMPlus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:text="@string/btn_mplus"
+            android:textColor="@color/purple"
+            android:backgroundTint="@color/grey"
+            android:textSize="20sp"
+            android:fontFamily="@font/calculator"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- FILA 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:text="@string/AC"
+            android:textColor="@color/purple"
+            android:backgroundTint="@color/grey"
+            android:textSize="22sp"
+            android:fontFamily="@font/calculator"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:text="@string/delete"
+            android:textColor="@color/purple"
+            android:backgroundTint="@color/grey"
+            android:textSize="22sp"
+            android:fontFamily="@font/calculator"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:text="@string/modulo"
+            android:textColor="@color/purple"
+            android:backgroundTint="@color/grey"
+            android:textSize="25sp"
+            android:fontFamily="@font/calculator"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button15"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:text="@string/divis"
+            android:textColor="@color/purple"
+            android:backgroundTint="@color/grey"
+            android:textSize="25sp"
+            android:fontFamily="@font/calculator"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- FILA 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:text="@string/siete"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/grey"
+            android:textSize="25sp"
+            android:fontFamily="@font/calculator"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:text="@string/ocho"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/grey"
+            android:textSize="25sp"
+            android:fontFamily="@font/calculator"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:text="@string/nueve"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/grey"
+            android:textSize="25sp"
+            android:fontFamily="@font/calculator"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button16"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:text="@string/multi"
+            android:textColor="@color/purple"
+            android:backgroundTint="@color/grey"
+            android:textSize="25sp"
+            android:fontFamily="@font/calculator"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- FILA 3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:text="@string/cuatro"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/grey"
+            android:textSize="25sp"
+            android:fontFamily="@font/calculator"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:text="@string/cinco"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/grey"
+            android:textSize="25sp"
+            android:fontFamily="@font/calculator"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:text="@string/seis"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/grey"
+            android:textSize="25sp"
+            android:fontFamily="@font/calculator"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button17"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:text="@string/resta"
+            android:textColor="@color/purple"
+            android:backgroundTint="@color/grey"
+            android:textSize="25sp"
+            android:fontFamily="@font/calculator"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- FILA 4 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:text="@string/uno"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/grey"
+            android:textSize="25sp"
+            android:fontFamily="@font/calculator"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:text="@string/dos"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/grey"
+            android:textSize="25sp"
+            android:fontFamily="@font/calculator"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:text="@string/tres"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/grey"
+            android:textSize="25sp"
+            android:fontFamily="@font/calculator"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button18"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:text="@string/suma"
+            android:textColor="@color/purple"
+            android:backgroundTint="@color/grey"
+            android:textSize="25sp"
+            android:fontFamily="@font/calculator"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- FILA 5 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_margin="3dp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:text="@string/zero"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/grey"
+            android:textSize="25sp"
+            android:fontFamily="@font/calculator"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonComa"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:text="@string/coma"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/grey"
+            android:textSize="25sp"
+            android:fontFamily="@font/calculator"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button19"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:text="@string/igual"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/purple"
+            android:textSize="25sp"
+            android:fontFamily="@font/calculator"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

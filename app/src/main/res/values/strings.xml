@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Calculadora</string>
+
+    <!-- Números y Símbolos -->
+    <string name="zero">0</string>
+    <string name="uno">1</string>
+    <string name="dos">2</string>
+    <string name="tres">3</string>
+    <string name="cuatro">4</string>
+    <string name="cinco">5</string>
+    <string name="seis">6</string>
+    <string name="siete">7</string>
+    <string name="ocho">8</string>
+    <string name="nueve">9</string>
+    <string name="coma">,</string>
+
+    <!-- Funciones -->
+    <string name="suma">+</string>
+    <string name="resta">−</string>
+    <string name="multi">×</string>
+    <string name="divis">÷</string>
+    <string name="modulo">%</string>
+    <string name="delete">Del</string>
+    <string name="AC">AC</string>
+    <string name="igual">=</string>
+
+    <!-- Memoria -->
+    <string name="btn_mc">MC</string>
+    <string name="btn_mr">MR</string>
+    <string name="btn_mminus">M-</string>
+    <string name="btn_mplus">M+</string>
+</resources>
